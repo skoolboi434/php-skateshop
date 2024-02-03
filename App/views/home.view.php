@@ -1,6 +1,7 @@
 <?php loadPartial('header'); ?>
 
-<h1>Home</h1>
-
+<div class="container">
+  <h1>Home</h1>
+</div>
 
 <?php loadPartial('footer'); ?>
