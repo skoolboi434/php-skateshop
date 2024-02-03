@@ -1,3 +1,4 @@
 <?php
+require("../helpers.php");
+loadView('home');
 
-require("../app/views/home.view.php");
