@@ -26,6 +26,19 @@
   min-height: 65px;
 }
 
+.brand-card-container:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.brand-card-container .brand-card {
+  background-color: #fff;
+  text-align: center;
+  display: block;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 30px 0;
+  text-decoration: none;
+  color: #000;
+}
+
 .product-details .img-container img {
   width: 50%;
 }

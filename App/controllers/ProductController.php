@@ -57,4 +57,21 @@ class ProductController
     }
     loadView("products/show", ["product" => $product]);
   }
+
+  /**
+   * Show products by brand
+   */
+
+  public function brands($params)
+  {
+    $brand = $params['brand'] ?? '';
+
+    $params = [
+      'brand' => $brand
+    ];
+
+    $products = $this->db->query("SELECT * FROM products WHERE brand = :brand ", $params)->fetchAll();
+
+    loadView("products/brands", ["products" => $products, "brand" => $brand]);
+  }
 }

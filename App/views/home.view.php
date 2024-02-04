@@ -5,7 +5,7 @@
 
 <div class="container">
   <section class="featured-products">
-    <div class="heading-containe my-3">
+    <div class="heading-containe my-5">
       <h3>Featured Products</h3>
     </div>
 
@@ -29,7 +29,7 @@
             <span class="deck-size d-block mb-2">
               <?= $product->size; ?>"
             </span>
-            <span class="price"><strong>$
+            <span class="price"><strong>
                 <?= formatPrice($product->price); ?>
               </strong></span>
           </div>
@@ -42,10 +42,13 @@
   <!-- End Featured Products -->
 
   <section class="brands-container">
+    <div class="heading-containe my-5">
+      <h3>Brands</h3>
+    </div>
     <div class="row">
       <?php foreach ($brands as $brand): ?>
-      <div class="col-md-3">
-        <a href="">
+      <div class="col-md-3 brand-card-container">
+        <a href="/products/<?php echo $brand->brand; ?>" class="brand-card">
           <?php echo $brand->brand; ?>
         </a>
       </div>

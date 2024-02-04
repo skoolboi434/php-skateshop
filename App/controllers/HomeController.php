@@ -3,6 +3,9 @@
 namespace App\Controllers;
 
 use Framework\Database;
+
+use Traits\BrandTrait;
+
 use PDO;
 
 class HomeController
@@ -20,23 +23,14 @@ class HomeController
    * @return void
    */
 
+  use BrandTrait;
+
   public function index()
   {
-    $brands = $this->getUniqueBrands();
+    $brands = $this->getUniqueBrands($this->db);
 
     $products = $this->db->query("SELECT * FROM products LIMIT 8")->fetchAll();
     loadView("home", ["products" => $products, "brands" => $brands]);
   }
 
-  /**
-   * Get list of brands
-   * 
-   */
-
-  public function getUniqueBrands()
-  {
-    $brands = $this->db->query("SELECT DISTINCT brand FROM products")->fetchAll(PDO::FETCH_OBJ);
-
-    return $brands;
-  }
 }
