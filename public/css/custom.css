@@ -1,0 +1,32 @@
+.navbar-custom {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px 0;
+}
+.navbar-custom .navbar-nav .nav-item:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.product-card {
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px;
+}
+.product-card .img-container {
+  text-align: center;
+}
+.product-card .img-container img {
+  width: 60%;
+}
+.product-card .product-info .product-brand {
+  font-size: 14px;
+  font-weight: 700;
+}
+.product-card .product-info .product-title {
+  font-size: 14px;
+  min-height: 65px;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=custom.css.map */

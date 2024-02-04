@@ -3,6 +3,14 @@
 class Router
 {
 
+  /**
+   * Add a new route
+   * @param mixed $method
+   * @param mixed $uri
+   * @param mixed $controller
+   * @return void
+   */
+
   public function registerRoute($method, $uri, $controller)
   {
     $this->routes[] = [
