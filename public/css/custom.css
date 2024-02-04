@@ -1,6 +1,6 @@
 .navbar-custom {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .navbar-custom .navbar-nav .nav-item:not(:last-of-type) {
   margin-right: 15px;
@@ -24,6 +24,10 @@
 .product-card .product-info .product-title {
   font-size: 14px;
   min-height: 65px;
+}
+
+.product-details .img-container img {
+  width: 50%;
 }
 
 body {

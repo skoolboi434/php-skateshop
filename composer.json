@@ -1,0 +1,16 @@
+{
+  "name": "skoolboi434/php-skateshop",
+  "description": "Eccommerce Project",
+  "authors": [
+    {
+      "name": "Travis Davis",
+      "email": "skoolboi434@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "Framework/",
+      "App\\": "App/"
+    }
+  }
+}

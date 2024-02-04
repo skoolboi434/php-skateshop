@@ -21,7 +21,7 @@
 <body>
   <nav class="navbar navbar-custom navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Navbar</a>
+      <a class="navbar-brand" href="/">Skateshop</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false"

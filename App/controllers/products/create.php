@@ -1,1 +1,0 @@
-<?php loadView("products/create");
