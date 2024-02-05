@@ -1,10 +1,18 @@
 <?= loadPartial("header"); ?>
 
-<div class="product-details container my-3">
+<div class="product-details container my-5">
+  <div class="btn-container mb-5 d-flex justify-content-end">
+    <a href="/products/edit/<?= $product->id ?>"
+      class="btn btn-primary d-block me-2">Edit</a>
+    <form action="" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+  </div>
   <div class="row">
     <div class="col-md-6">
       <div class="img-container">
-        <img src="/imgs/<?= $product->featured_image ?>" class="img-fluid"
+        <img src="/uploads/<?= $product->featured_image ?>" class="img-fluid"
           alt="<?= $product->name ?>">
       </div>
     </div>

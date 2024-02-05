@@ -150,10 +150,6 @@ class ProductController
 
     }
 
-
-
-
-
     foreach ($requiredFields as $field) {
       if (empty($newProductData[$field]) || !Validation::string($newProductData[$field])) {
         $errors[$field] = ucfirst($field) . ' is required';
@@ -193,7 +189,64 @@ class ProductController
 
       $this->db->query($query, $newProductData);
 
+      // Set flash message
+      $_SESSION['success_message'] = 'Product added successfully';
+
       redirect("/products");
     }
+  }
+
+  /**
+   * Delete a product
+   * 
+   * @param array $params
+   * @return void
+   */
+
+  public function destroy($params)
+  {
+    $id = $params["id"];
+
+    $params = [
+      "id" => $id
+    ];
+
+    $product = $this->db->query('SELECT * FROM products WHERE id = :id', $params)->fetch();
+
+    if (!$product) {
+      ErrorController::notFound('Product not found');
+      return;
+    }
+
+    $this->db->query('DELETE FROM products WHERE id = :id', $params);
+
+    // Set flash message
+    $_SESSION['success_message'] = 'Product deleted successfully';
+
+    redirect('/products');
+  }
+
+  /**
+   * Show product edit form
+   * @param array $params
+   * @return void
+   */
+
+  public function edit($params)
+  {
+    $id = $params['id'] ?? '';
+
+    $params = [
+      'id' => $id
+    ];
+
+    $product = $this->db->query("SELECT * FROM products WHERE id = :id ", $params)->fetch();
+
+    // Check if product exists
+    if (!$product) {
+      ErrorController::notFound('Product not found');
+      return;
+    }
+    loadView("products/edit", ["product" => $product]);
   }
 }

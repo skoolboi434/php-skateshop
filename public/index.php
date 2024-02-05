@@ -1,22 +1,11 @@
 <?php
 
-
-
+session_start();
 
 use Framework\Router;
 
 require __DIR__ . "/../vendor/autoload.php";
 require("../helpers.php");
-
-
-// Custom Autoloader
-
-// spl_autoload_register(function ($class) {
-//   $path = basePath("Framework/" . $class . ".php");
-//   if (file_exists($path)) {
-//     require($path);
-//   }
-// });
 
 // Instantiing the router
 $router = new Router();

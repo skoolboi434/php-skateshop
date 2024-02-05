@@ -1,5 +1,7 @@
 <?php
 
+define('BASE_URL', 'http://localhost:9000');
+
 /**
  * Get the base path
  * 
