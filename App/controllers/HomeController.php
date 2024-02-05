@@ -29,7 +29,7 @@ class HomeController
   {
     $brands = $this->getUniqueBrands($this->db);
 
-    $products = $this->db->query("SELECT * FROM products LIMIT 8")->fetchAll();
+    $products = $this->db->query("SELECT * FROM products ORDER BY created_at DESC LIMIT 8")->fetchAll();
     loadView("home", ["products" => $products, "brands" => $brands]);
   }
 

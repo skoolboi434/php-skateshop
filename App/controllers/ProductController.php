@@ -23,7 +23,7 @@ class ProductController
   public function index()
   {
 
-    $products = $this->db->query("SELECT * FROM products")->fetchAll();
+    $products = $this->db->query("SELECT * FROM products ORDER BY created_at DESC")->fetchAll();
     loadView("products/index", ["products" => $products]);
   }
 
