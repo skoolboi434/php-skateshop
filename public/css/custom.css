@@ -39,6 +39,14 @@
   color: #000;
 }
 
+.form-container {
+  background-color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px;
+}
+
 .product-details .img-container img {
   width: 50%;
 }
