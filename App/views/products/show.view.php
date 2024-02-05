@@ -1,6 +1,7 @@
 <?= loadPartial("header"); ?>
 
 <div class="product-details container my-5">
+  <?php loadPartial("message"); ?>
   <div class="btn-container mb-5 d-flex justify-content-end">
     <a href="/products/edit/<?= $product->id ?>"
       class="btn btn-primary d-block me-2">Edit</a>

@@ -6,8 +6,11 @@
     </div>
 
 
+
     <div class="form-container">
-      <form method="POST" action="/products" enctype="multipart/form-data">
+      <form method="POST" action="/products/<?= $product->id ?>"
+        enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
         <div class="form-group mb-3">
           <input type="text" class="form-control" name="name"
             placeholder="Product Name" value="<?= $product->name ?? '' ?>">
@@ -41,7 +44,8 @@
             id="uploadImage" value="<?= $product->featured_image ?? '' ?>" />
         </div>
         <div class="btn-container">
-          <button type="submit" class="btn btn-success d-block w-100 mb-3">Add
+          <button type="submit"
+            class="btn btn-success d-block w-100 mb-3">Update
             Product</button>
           <a href="/products/<?= $product->id ?>"
             class="btn btn-danger d-block w-100">Cancel</a>

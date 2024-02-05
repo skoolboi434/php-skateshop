@@ -48,7 +48,8 @@
     <div class="row">
       <?php foreach ($brands as $brand): ?>
       <div class="col-md-3 brand-card-container">
-        <a href="/products/<?php echo $brand->brand; ?>" class="brand-card">
+        <a href="/products/brands/<?php echo $brand->brand; ?>"
+          class="brand-card">
           <?php echo $brand->brand; ?>
         </a>
       </div>

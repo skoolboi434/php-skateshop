@@ -19,7 +19,7 @@ function basePath($path = '')
  * 
  * @param string $name
  * @param array $data
- * @return string
+ * @return void
  */
 
 function loadView($name, $data = [])
@@ -39,7 +39,7 @@ function loadView($name, $data = [])
  * 
  * @param string $name
  * @param array $data
- * @return string
+ * @return void
  */
 
 function loadPartial($name, $data = [])
@@ -78,7 +78,7 @@ function inspectAndDie($value)
 {
   echo "<pre>";
   die(var_dump($value));
-  echo "</pre>";
+
 
 }
 
