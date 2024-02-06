@@ -16,6 +16,7 @@ trait Searchable
             OR brand LIKE :query 
             OR category LIKE :query 
             OR description LIKE :query
+            OR size LIKE :query
     ", ['query' => $likeQuery])->fetchAll();
   }
 }
