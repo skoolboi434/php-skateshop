@@ -1,0 +1,16 @@
+.hero {
+  //background-image: url('https://chocolateskateboards.com/site/assets/features/liquidswords/images/vincent_switch_heel_1600-min.jpg');
+  background-color: rgba($black, 0.8);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+
+  .search-container {
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+  }
+}

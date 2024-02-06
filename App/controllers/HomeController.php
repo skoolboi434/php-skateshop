@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Framework\Database;
 
+
 use Traits\BrandTrait;
 
 use PDO;
@@ -25,8 +26,10 @@ class HomeController
 
   use BrandTrait;
 
+
   public function index()
   {
+
     $brands = $this->getUniqueBrands($this->db);
 
     $products = $this->db->query("SELECT * FROM products ORDER BY created_at DESC LIMIT 8")->fetchAll();

@@ -8,6 +8,7 @@ $router->get('/products/{id}', 'ProductController@show');
 $router->get('/products/brands/{brand}', 'ProductController@brands');
 
 $router->post('/products', 'ProductController@store');
+$router->post('/products/search', 'ProductController@performSearch');
 
 $router->put('/products/{id}', 'ProductController@update');
 
