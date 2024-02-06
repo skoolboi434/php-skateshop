@@ -1,16 +1,26 @@
 .hero {
-  //background-image: url('https://chocolateskateboards.com/site/assets/features/liquidswords/images/vincent_switch_heel_1600-min.jpg');
-  background-color: rgba($black, 0.8);
+  background-image: url('https://www.zumiez.com/media/wysiwyg/promo/girl-x-hello-kitty-skateboards-dec23-1200x1350_1_.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   min-height: 500px;
   display: flex;
   align-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.8);
+  }
 
   .search-container {
     max-width: 800px;
     height: 100%;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
   }
 }
