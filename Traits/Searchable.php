@@ -8,6 +8,14 @@ trait Searchable
   {
     // Implement your search logic here
     // For example, querying the database based on the given search query
-    return $this->db->query("SELECT * FROM products WHERE name LIKE :query", ['query' => "%" . (string) $query . "%"])->fetchAll();
+    $likeQuery = '%' . $query . '%';
+    return $this->db->query("
+        SELECT * 
+        FROM products 
+        WHERE name LIKE :query 
+            OR brand LIKE :query 
+            OR category LIKE :query 
+            OR description LIKE :query
+    ", ['query' => $likeQuery])->fetchAll();
   }
 }
