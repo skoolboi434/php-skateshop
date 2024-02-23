@@ -7,6 +7,7 @@ use PDO;
 class Database
 {
   public $conn;
+  protected $pdo;
 
   /**
    * Constructor for Database class
@@ -30,7 +31,16 @@ class Database
     } catch (PDOException $e) {
       throw new Exception("Database connection failed: {$e->getMessage()}");
     }
+
+    
   }
+
+  public function prepareAndExecute($sql, $params = []) {
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute($params);
+    return $stmt;
+}
+
 
   /**
    * Query the DB

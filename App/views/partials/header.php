@@ -14,6 +14,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,400&display=swap"
     rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9afaec21b5.js"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/custom.css">
 
   <title>Skateshop</title>
@@ -41,8 +43,24 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/products/create">Add
               Product</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/cart">
+              <i class="fa fa-solid fa-basket-shopping"></i> Cart
+              <?php 
+              if(isset($_SESSION['cart'])) {
+                $count = count($_SESSION['cart']);
+                echo "<span id=\"cart_count\">$count</span>";
+              } else {
+                echo "<span id=\"cart_count\">0</span>";
+              }
+              ?>
+            </a>
+
           </li>
         </ul>
+
       </div>
     </div>
   </nav>
