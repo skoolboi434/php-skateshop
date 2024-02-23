@@ -3,9 +3,6 @@
 loadPartial('header'); 
 
 
-
-//inspectAndDie($_SESSION['cart']);
-
 ?>
 <div class="container mb-5 pt-5">
   <?php loadPartial("message"); ?>

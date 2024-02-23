@@ -5,7 +5,7 @@
       <h3 class="heading">Edit Product Product</h3>
     </div>
 
-
+    <?php loadPartial('errors', ['errors' => $errors ?? []]); ?>
 
     <div class="form-container">
       <form method="POST" action="/products/<?= $product->id ?>"

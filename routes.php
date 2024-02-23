@@ -17,3 +17,9 @@ $router->post('/cart/clear', 'CartController@clearCart');
 $router->put('/products/{id}', 'ProductController@update');
 
 $router->delete('/products/{id}', 'ProductCOntroller@destroy');
+
+$router->get('/auth/register', 'UserController@create');
+$router->get('/auth/login', 'UserController@login');
+
+$router->post('/auth/register', 'UserController@store');
+$router->post('/auth/logout', 'UserController@logout');

@@ -9,13 +9,7 @@ ini_set('display_errors', 1);
       <h3 class="heading">Add New Product</h3>
     </div>
 
-    <?php if (isset($errors)): ?>
-    <?php foreach ($errors as $error): ?>
-    <div class="alert alert-danger my-3">
-      <?= $error ?>
-    </div>
-    <?php endforeach; ?>
-    <?php endif; ?>
+    <?php loadPartial('errors', ['errors' => $errors ?? []]); ?>
     <div class="form-container">
       <form method="POST" action="/products" enctype="multipart/form-data">
         <div class="form-group mb-3">

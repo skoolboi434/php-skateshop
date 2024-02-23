@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <?php use Framework\Session; ?>
   <nav class="navbar navbar-custom navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Skateshop</a>
@@ -40,11 +41,23 @@
             <a class="nav-link" aria-current="page"
               href="/products">Products</a>
           </li>
+          <?php if(Session::has('user')) : ?>
+          <li class="nav-link">
+            <form action="/auth/logout" method="POST">
+              <button class="btn inline" type="submit">Logout</button>
+            </form>
+          </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/products/create">Add
               Product</a>
-
           </li>
+          <?php else : ?>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/auth/login">Login</a>
+          </li>
+          <?php endif; ?>
+
+
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/cart">
               <i class="fa fa-solid fa-basket-shopping"></i> Cart
